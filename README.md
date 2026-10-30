@@ -35,11 +35,8 @@ This is the first version of hACK. I plan to add user accounts, search and filte
 
 ## Screenshots
 
-### Home
-![hACK Home Page](screenshots/homepage.png)
+![hACK Home Page](hack-screenshots/homepage.png)
 
-### Discover Hackathons
-![Discover Hackathons](screenshots/discover.png)
+![Discover Hackathons](hack-screenshots/discover.png)
 
-### Find Teammates
-![Find Teammates](screenshots/teammates.png)
+![Find Teammates](hack-screenshots/teammates.png)
