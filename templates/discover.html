@@ -13,12 +13,12 @@
 <body>
 
     <nav>
-        <h2>hACK</h2>
+        <a href="{{ url_for('home') }}" class="logo">hACK</a>
 
         <div>
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('discover') }}">Discover</a>
-            <a href="#">Find Teammates</a>
+            <a href="{{ url_for('teammates') }}">Find Teammates</a>
             <a href="#">Login</a>
             <button>Join hACK</button>
         </div>

@@ -32,3 +32,14 @@ I used the same idea in hACK. Instead of sending a normal connection request, us
 ## What's Next
 
 This is the first version of hACK. I plan to add user accounts, search and filters, better teammate matching, and a way to manage ACK requests.
+
+## Screenshots
+
+### Home
+![hACK Home Page](screenshots/homepage.png)
+
+### Discover Hackathons
+![Discover Hackathons](screenshots/discover.png)
+
+### Find Teammates
+![Find Teammates](screenshots/teammates.png)

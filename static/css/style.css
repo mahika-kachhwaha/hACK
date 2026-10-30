@@ -338,3 +338,11 @@ main > section:nth-child(2) p {
         grid-template-columns: 1fr;
     }
 }
+
+.logo {
+    color: #f5f7fa;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
