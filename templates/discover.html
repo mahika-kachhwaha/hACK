@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Hackathons | hACK</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <h2>hACK</h2>
+
+        <div>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('discover') }}">Discover</a>
+            <a href="#">Find Teammates</a>
+            <a href="#">Login</a>
+            <button>Join hACK</button>
+        </div>
+    </nav>
+
+    <main class="discover-page">
+
+        <div class="discover-heading">
+            <p>FIND YOUR NEXT BUILD</p>
+            <h1>Upcoming Hackathons</h1>
+            <p>
+                Find an event you're interested in and see who else
+                wants to hack.
+            </p>
+        </div>
+
+        <div class="hackathon-grid">
+
+            {% for hackathon in hackathons %}
+
+            <div class="hackathon-card">
+
+                <span class="event-date">
+                    {{ hackathon.date }}
+                </span>
+
+                <h2>{{ hackathon.name }}</h2>
+
+                <p class="location">
+                    📍 {{ hackathon.location }}
+                </p>
+
+                <p>
+                    {{ hackathon.description }}
+                </p>
+
+                <button>I'm Interested</button>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+</body>
+</html>

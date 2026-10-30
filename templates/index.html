@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hACK | Don't Hack Alone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <h2>hACK</h2>
+
+        <div>
+            <a href="{{ url_for('discover') }}">Discover</a>
+            <a href="{{ url_for('teammates') }}">Find Teammates</a>
+            <a href="#">Login</a>
+            <button>Join hACK</button>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <p>Built for students who want to hack.</p>
+
+            <h1>
+                Your next hackathon<br>
+                shouldn't start alone.
+            </h1>
+
+            <p>
+                Discover upcoming hackathons, find students who are going,
+                and connect with people looking to build a team.
+            </p>
+
+            <a href="{{ url_for('discover') }}">
+                <button>Discover Hackathons</button>
+            </a>
+            
+            <a href="{{ url_for('teammates') }}">
+                <button>Find Teammates</button>
+            </a>
+        </section>
+
+        <section>
+            <h2>How hACK works</h2>
+
+            <div>
+                <h3>1. Find a hackathon</h3>
+                <p>Explore hackathons you might want to attend.</p>
+            </div>
+
+            <div>
+                <h3>2. See who's going</h3>
+                <p>Find students interested in attending the same event.</p>
+            </div>
+
+            <div>
+                <h3>3. Send an ACK</h3>
+                <p>Connect with potential teammates and start building.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

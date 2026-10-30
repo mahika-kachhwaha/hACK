@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Teammates | hACK</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <h2>hACK</h2>
+
+        <div>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('discover') }}">Discover</a>
+            <a href="{{ url_for('teammates') }}">Find Teammates</a>
+            <a href="#">Login</a>
+            <button>Join hACK</button>
+        </div>
+    </nav>
+
+    <main class="teammates-page">
+
+        <div class="teammates-heading">
+            <p>DON'T HACK ALONE</p>
+            <h1>Find Your Teammates</h1>
+            <p>
+                Meet students who want to build, learn, and attend
+                hackathons with you.
+            </p>
+        </div>
+
+        <div class="teammate-grid">
+
+            {% for user in users %}
+
+            <div class="teammate-card">
+
+                <div class="profile-icon">
+                    {{ user.name[0] }}
+                </div>
+
+                <h2>{{ user.name }}</h2>
+
+                <p class="school">
+                    {{ user.university }}
+                </p>
+
+                <p class="student-info">
+                    {{ user.major }} • {{ user.year }}
+                </p>
+
+                <div class="profile-section">
+                    <span>SKILLS</span>
+                    <p>{{ user.skills }}</p>
+                </div>
+
+                <div class="profile-section">
+                    <span>INTERESTED IN</span>
+                    <p>{{ user.interests }}</p>
+                </div>
+
+                <div class="experience">
+                    {{ user.experience }}
+                </div>
+
+                <form action="{{ url_for('send_ack', user_id=user.id) }}" method="POST">
+                    <button class="ack-button" type="submit">
+                        {% if request.args.get('sent') == user.id|string %}
+                            ACK Sent ✓
+                        {% else %}
+                            Send ACK
+                        {% endif %}
+                    </button>
+                </form>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </main>
+
+</body>
+</html>
