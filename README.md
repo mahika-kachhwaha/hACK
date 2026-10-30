@@ -1,6 +1,6 @@
 # hACK
 
-**Don't hack alone.**
+**Why hack alone?**
 
 hACK is a web app that helps students find hackathons and connect with other students who are also looking for teammates.
 
